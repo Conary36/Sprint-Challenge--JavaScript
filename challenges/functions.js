@@ -15,24 +15,22 @@ function consume(a,b,cb){
   * Create a function named multiply that returns the product of two numbers 
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
-function add(a,b,cb){
-  return cb(a,b);
+function add(a,b,){
+  return (a+b);
 }
- add(3,2, function(a,b){
-  console.log(a + b);
-});
-function multiply(a,b,cb){
-  return cb(a,b);
+//   add(a,b, function(a,b){
+//   console.log(a + b);
+// });
+function multiply(a,b){
+  return (a*b);
 }
-multiply(4,4, function(a,b){
-  console.log(a * b);
-});
-function greeting(a,b,cb){
-  return cb(a,b);
+  
+// function greeting(a, b,) {
+//   return (a,b);
+// }
+function greeting(a,b){
+  console.log(`Hello ${a} ${b},nice to meet you!`);
 }
-greeting('Conary','Beckford', function(a,b){
-  console.log('Hello' + " " + a + " " + b + ',nice to meet you!');
-})
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
 console.log(consume(2, 2, add)); // 4
 console.log(consume(10, 16, multiply)); // 160
